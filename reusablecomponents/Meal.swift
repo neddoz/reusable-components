@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 struct Meal {
     var name: String
     var photo: UIImage?
