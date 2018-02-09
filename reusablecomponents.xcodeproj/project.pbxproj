@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8513548202DB83400D07E04 /* RatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8513547202DB83400D07E04 /* RatingsViewController.swift */; };
 		C86EE2572027A4C200262344 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86EE2562027A4C200262344 /* AppDelegate.swift */; };
 		C86EE2592027A4C200262344 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86EE2582027A4C200262344 /* ViewController.swift */; };
 		C86EE25C2027A4C200262344 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86EE25A2027A4C200262344 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C8513547202DB83400D07E04 /* RatingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsViewController.swift; sourceTree = "<group>"; };
 		C86EE2532027A4C200262344 /* reusablecomponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reusablecomponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86EE2562027A4C200262344 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C86EE2582027A4C200262344 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				C86EE28820287AA500262344 /* components */,
 				C86EE2562027A4C200262344 /* AppDelegate.swift */,
 				C86EE2582027A4C200262344 /* ViewController.swift */,
+				C8513547202DB83400D07E04 /* RatingsViewController.swift */,
 				C86EE25A2027A4C200262344 /* Main.storyboard */,
 				C8B2F982202C6359000FE892 /* ratingsView.xib */,
 				C8B2F984202C6A60000FE892 /* RatingView.swift */,
@@ -285,6 +288,7 @@
 			files = (
 				C86EE2592027A4C200262344 /* ViewController.swift in Sources */,
 				C86EE285202847BE00262344 /* Meal.swift in Sources */,
+				C8513548202DB83400D07E04 /* RatingsViewController.swift in Sources */,
 				C86EE2572027A4C200262344 /* AppDelegate.swift in Sources */,
 				C8B2F985202C6A60000FE892 /* RatingView.swift in Sources */,
 				C86EE28A20287AC500262344 /* ListViewDatasource.swift in Sources */,

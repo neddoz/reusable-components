@@ -33,15 +33,18 @@
                             <outlet property="delegate" destination="9oI-CU-1Hc" id="D2o-o4-uSQ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="gWZ-yR-8yz" kind="show" identifier="toRatingsVc" id="Q3x-k1-qS1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWE-qS-M8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1" y="-130"/>
         </scene>
-        <!--View Controller-->
+        <!--Ratings View Controller-->
         <scene sceneID="WcT-IN-SXN">
             <objects>
-                <viewController id="gWZ-yR-8yz" sceneMemberID="viewController">
+                <viewController id="gWZ-yR-8yz" customClass="RatingsViewController" customModule="reusablecomponents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Hn-so-ngJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

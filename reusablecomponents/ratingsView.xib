@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RatingView" customModule="reusablecomponents" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -67,6 +67,13 @@
                 <constraint firstItem="VxB-cw-JQA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="2" id="kwh-Gz-lA4"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="fifth" destination="YpC-yn-VPS" id="XgN-M5-vyg"/>
+                <outlet property="first" destination="Ow6-FE-Yc3" id="kck-GO-dlO"/>
+                <outlet property="fourth" destination="UoF-8m-lch" id="scH-rI-0H5"/>
+                <outlet property="second" destination="YBM-9s-nKV" id="XFh-Y3-dw5"/>
+                <outlet property="third" destination="m0d-tr-78l" id="5ZP-fv-6R3"/>
+            </connections>
             <point key="canvasLocation" x="-88.5" y="783.5"/>
         </view>
     </objects>

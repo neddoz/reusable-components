@@ -39,3 +39,10 @@ class MealsTableTableViewController: UITableViewController {
         meals.append(mealItemthree)
     }
 }
+
+extension MealsTableTableViewController {
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        performSegue(withIdentifier: "toRatingsVc", sender: nil)
+    }
+}
