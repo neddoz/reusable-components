@@ -19,8 +19,8 @@ class RatingsViewController: UIViewController {
     private lazy var ratingNib = UINib(nibName: "ratingsView", bundle: nil)
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         guard let ratingView = loadRatingView() else { return }
+        super.viewDidLoad()
         activateConstraint(for: ratingView, attribute: .top)
     }
 
@@ -38,7 +38,7 @@ class RatingsViewController: UIViewController {
         NSLayoutConstraint(item: ratingView,
                            attribute: attribute,
                            relatedBy: .equal,
-                           toItem: view,
+                           toItem: self.view,
                            attribute: attribute,
                            multiplier: 1.0,
                            constant: 203).isActive = true
