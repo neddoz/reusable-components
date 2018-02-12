@@ -33,7 +33,7 @@ class RatingsViewController: UIViewController {
     }
 
     private func activateConstraint(`for` ratingView: UIView, attribute: ConstraintAttribute){
-        let attribute: NSLayoutAttribute = attribute.rawValue == "top" ? .top : .left
+        let attribute: NSLayoutAttribute = attribute == .top ? .top : .left
         ratingView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: ratingView,
                            attribute: attribute,

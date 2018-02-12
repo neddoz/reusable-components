@@ -30,6 +30,7 @@ class RatingView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         ratingButtons = [first, second, third, fourth, fifth]
+        setUpButtons()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -47,7 +48,7 @@ class RatingView: UIView {
         for button in self.ratingButtons {
             button.setImage(#imageLiteral(resourceName: "filledStar"), for: .selected)
             button.setImage(#imageLiteral(resourceName: "emptyStar"), for: .normal)
-            button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+            button.addTarget(self, action: #selector(buttonTapped(button:)), for: .touchUpInside)
         }
         updateState()
     }
