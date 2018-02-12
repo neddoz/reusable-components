@@ -75,6 +75,9 @@
                         <color key="backgroundColor" red="0.57786011695861816" green="0.62533837556838989" blue="0.090857960283756256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dgh-Rb-HUv"/>
                     </view>
+                    <connections>
+                        <outlet property="mealName" destination="NMV-Vg-i10" id="B67-Rw-ubx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbg-Xr-KX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

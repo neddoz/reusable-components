@@ -45,4 +45,9 @@ extension MealsTableTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         performSegue(withIdentifier: "toRatingsVc", sender: nil)
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationVc = segue.destination as? RatingsViewController else { return }
+        destinationVc.mealItems = meals
+    }
 }

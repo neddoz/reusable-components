@@ -25,24 +25,33 @@
                             <rect key="frame" x="0.0" y="0.0" width="67.5" height="40"/>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <state key="normal" image="emptyStar">
+                                <color key="titleColor" red="0.45547157526016235" green="0.55764824151992798" blue="0.34969609975814819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBM-9s-nKV">
                             <rect key="frame" x="70.5" y="0.0" width="67.5" height="40"/>
-                            <state key="normal" image="emptyStar"/>
+                            <state key="normal" image="emptyStar">
+                                <color key="titleColor" red="0.45547157526016235" green="0.55764824151992798" blue="0.34969609975814819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0d-tr-78l">
                             <rect key="frame" x="141" y="0.0" width="68" height="40"/>
-                            <state key="normal" image="emptyStar"/>
+                            <state key="normal" image="emptyStar">
+                                <color key="titleColor" red="0.45547157526016235" green="0.55764824151992798" blue="0.34969609975814819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoF-8m-lch">
                             <rect key="frame" x="212" y="0.0" width="67.5" height="40"/>
-                            <state key="normal" image="emptyStar"/>
+                            <state key="normal" image="emptyStar">
+                                <color key="titleColor" red="0.45547157526016235" green="0.55764824151992798" blue="0.34969609975814819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpC-yn-VPS">
                             <rect key="frame" x="282.5" y="0.0" width="67.5" height="40"/>
-                            <state key="normal" image="emptyStar"/>
+                            <state key="normal" image="emptyStar">
+                                <color key="titleColor" red="0.45547157526016235" green="0.55764824151992798" blue="0.34969609975814819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                         </button>
                     </subviews>
                     <constraints>
@@ -85,7 +94,7 @@
                 <outlet property="second" destination="YBM-9s-nKV" id="XFh-Y3-dw5"/>
                 <outlet property="third" destination="m0d-tr-78l" id="5ZP-fv-6R3"/>
             </connections>
-            <point key="canvasLocation" x="-1070" y="-261"/>
+            <point key="canvasLocation" x="-1207" y="-516"/>
         </view>
     </objects>
     <resources>
