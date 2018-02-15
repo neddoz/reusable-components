@@ -74,7 +74,9 @@ class RatingsViewController: UIViewController {
         // default constant when setting the top constraint
         var constant: CGFloat = 203
         // Optionally change the constatant if we are setting the left constaraints
-        if let offset = offset { constant = offset }
+        if let offset = offset {
+            constant = offset
+        }
         NSLayoutConstraint(item: ratingView,
                            attribute: attribute,
                            relatedBy: .equal,

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,10 +18,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="VxB-cw-JQA">
-                    <rect key="frame" x="1" y="50" width="350" height="40"/>
+                    <rect key="frame" x="20" y="50" width="300" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ow6-FE-Yc3">
-                            <rect key="frame" x="0.0" y="0.0" width="67.5" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="57.5" height="40"/>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <state key="normal" image="emptyStar">
                                 <color key="titleColor" red="0.45547157526016235" green="0.55764824151992798" blue="0.34969609975814819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -30,32 +29,32 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBM-9s-nKV">
-                            <rect key="frame" x="70.5" y="0.0" width="67.5" height="40"/>
+                            <rect key="frame" x="60.5" y="0.0" width="57.5" height="40"/>
                             <state key="normal" image="emptyStar">
                                 <color key="titleColor" red="0.45547157526016235" green="0.55764824151992798" blue="0.34969609975814819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0d-tr-78l">
-                            <rect key="frame" x="141" y="0.0" width="68" height="40"/>
+                            <rect key="frame" x="121" y="0.0" width="58" height="40"/>
                             <state key="normal" image="emptyStar">
                                 <color key="titleColor" red="0.45547157526016235" green="0.55764824151992798" blue="0.34969609975814819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoF-8m-lch">
-                            <rect key="frame" x="212" y="0.0" width="67.5" height="40"/>
+                            <rect key="frame" x="182" y="0.0" width="57.5" height="40"/>
                             <state key="normal" image="emptyStar">
                                 <color key="titleColor" red="0.45547157526016235" green="0.55764824151992798" blue="0.34969609975814819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpC-yn-VPS">
-                            <rect key="frame" x="282.5" y="0.0" width="67.5" height="40"/>
+                            <rect key="frame" x="242.5" y="0.0" width="57.5" height="40"/>
                             <state key="normal" image="emptyStar">
                                 <color key="titleColor" red="0.45547157526016235" green="0.55764824151992798" blue="0.34969609975814819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="width" constant="350" id="ahk-qM-Pn5"/>
+                        <constraint firstAttribute="width" constant="300" id="ahk-qM-Pn5"/>
                         <constraint firstAttribute="height" constant="40" id="tHu-Gh-Mse"/>
                     </constraints>
                 </stackView>
@@ -67,19 +66,18 @@
                     <state key="normal" title="PREVIOUS"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCZ-Rx-7Zb">
-                    <rect key="frame" x="278" y="162" width="39" height="30"/>
+                    <rect key="frame" x="278" y="162" width="63" height="30"/>
                     <state key="normal" title="NEXT"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="VxB-cw-JQA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="CYd-dt-9LG"/>
+                <constraint firstItem="VxB-cw-JQA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="RCN-rF-5Nc"/>
                 <constraint firstItem="UCZ-Rx-7Zb" firstAttribute="leading" secondItem="JuW-9E-g8q" secondAttribute="trailing" constant="150" id="RrI-9S-VQ2"/>
                 <constraint firstItem="0CN-sx-vH5" firstAttribute="trailing" secondItem="UCZ-Rx-7Zb" secondAttribute="trailing" constant="34" id="SbU-Sv-uKC"/>
-                <constraint firstItem="VxB-cw-JQA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="15" id="ZQx-P7-kfF"/>
                 <constraint firstItem="JuW-9E-g8q" firstAttribute="top" secondItem="VxB-cw-JQA" secondAttribute="bottom" constant="78" id="iJn-vU-LOz"/>
                 <constraint firstAttribute="bottom" secondItem="JuW-9E-g8q" secondAttribute="bottom" constant="114" id="l7B-jm-foJ"/>
-                <constraint firstItem="0CN-sx-vH5" firstAttribute="trailing" secondItem="VxB-cw-JQA" secondAttribute="trailingMargin" id="qx0-ke-KDc"/>
                 <constraint firstItem="UCZ-Rx-7Zb" firstAttribute="centerY" secondItem="JuW-9E-g8q" secondAttribute="centerY" id="tv2-6y-zTm"/>
                 <constraint firstItem="JuW-9E-g8q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="xxG-Pv-Rr3"/>
             </constraints>
