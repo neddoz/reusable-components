@@ -64,10 +64,16 @@
                         <constraint firstAttribute="width" constant="112" id="fpm-JU-dxB"/>
                     </constraints>
                     <state key="normal" title="PREVIOUS"/>
+                    <connections>
+                        <action selector="previousButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="WRx-E7-Udc"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCZ-Rx-7Zb">
                     <rect key="frame" x="278" y="162" width="63" height="30"/>
                     <state key="normal" title="NEXT"/>
+                    <connections>
+                        <action selector="nextButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="wd4-0D-QDr"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -92,7 +98,7 @@
                 <outlet property="second" destination="YBM-9s-nKV" id="XFh-Y3-dw5"/>
                 <outlet property="third" destination="m0d-tr-78l" id="5ZP-fv-6R3"/>
             </connections>
-            <point key="canvasLocation" x="-1207" y="-516"/>
+            <point key="canvasLocation" x="-1207.5" y="-516"/>
         </view>
     </objects>
     <resources>

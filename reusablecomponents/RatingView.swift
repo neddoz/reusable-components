@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol RatingViewDelegate {
+    func nextButtonTapped()
+    func previousButtonTapped()
+}
+
 class RatingView: UIView {
+
+    var delegate: RatingViewDelegate?
 
     // MARK: Properties
     var rating = 0 {
@@ -35,6 +42,15 @@ class RatingView: UIView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+
+    //MARK: Actions
+    @IBAction func previousButtonTapped(_ sender: UIButton) {
+        delegate?.previousButtonTapped()
+    }
+
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
+        delegate?.nextButtonTapped()
     }
 
     // MARK: Private functions

@@ -31,30 +31,38 @@ class RatingsViewController: UIViewController {
     }
 
     private var currentLeftConstraint: NSLayoutConstraint!
-    private var previousLeftConstarint: NSLayoutConstraint!
-    private var nextLeftConstarint: NSLayoutConstraint!
+    private var previousLeftConstraint: NSLayoutConstraint!
+    private var nextLeftConstraint: NSLayoutConstraint!
 
     private let currentLeftOffset: CGFloat = 20
-    private let nextLeftOffset: CGFloat = 356
+    private let nextLeftOffset: CGFloat = 344
     private let previousLeftOffset: CGFloat = -316
 
     private lazy var ratingNib = UINib(nibName: "ratingsView", bundle: nil)
 
     override func viewDidLoad() {
-        guard let curentratingView = loadRatingView(),
-            let nextRatingView = loadRatingView(),
-            let previousratingView = loadRatingView() else { return }
+        guard let current = loadRatingView(),
+            let next = loadRatingView(),
+            let previous = loadRatingView() else { return }
         super.viewDidLoad()
 
-        // MARK: Top Constraints for our rating views
-        activateConstraint(for: curentratingView, attribute: .top, offset: nil)
-        activateConstraint(for: nextRatingView, attribute: .top, offset: nil)
-        activateConstraint(for: previousratingView, attribute: .top, offset: nil)
+        currentratingView = current
+        nextratingView = next
+        previousratingView = previous
 
-        // MARK: Left Constraints for our rating Views
-        activateConstraint(for: curentratingView, attribute: .left, offset: currentLeftOffset)
-        activateConstraint(for: nextRatingView, attribute: .left, offset: nextLeftOffset)
-        activateConstraint(for: previousratingView, attribute: .left, offset: previousLeftOffset)
+        currentratingView.delegate = self
+        nextratingView.delegate = self
+        previousratingView.delegate = self
+
+        // Top Constraints for our rating views
+        activateTopConstraint(for: currentratingView)
+        activateTopConstraint(for: nextratingView)
+        activateTopConstraint(for: previousratingView)
+
+        // Left Constraints for our rating Views
+        currentLeftConstraint = activateLeftConstraint(for: currentratingView, leftOffset: currentLeftOffset)
+        nextLeftConstraint = activateLeftConstraint(for: nextratingView, leftOffset: nextLeftOffset)
+        previousLeftConstraint = activateLeftConstraint(for: previousratingView, leftOffset: previousLeftOffset)
 
         // Bind Data
         bindView()
@@ -68,27 +76,88 @@ class RatingsViewController: UIViewController {
         return currentratingView
     }
 
-    private func activateConstraint(`for` ratingView: UIView, attribute: ConstraintAttribute, offset: CGFloat?){
+    private func activateTopConstraint(`for` ratingView: UIView){
         ratingView.translatesAutoresizingMaskIntoConstraints = false
-        let attribute: NSLayoutAttribute = attribute == .top ? .top : .left
-        // default constant when setting the top constraint
-        var constant: CGFloat = 203
-        // Optionally change the constatant if we are setting the left constaraints
-        if let offset = offset {
-            constant = offset
-        }
+        let constant: CGFloat = 203
         NSLayoutConstraint(item: ratingView,
-                           attribute: attribute,
+                           attribute: .top,
                            relatedBy: .equal,
                            toItem: self.view,
-                           attribute: attribute,
+                           attribute: .top,
                            multiplier: 1.0,
                            constant: constant).isActive = true
+    }
+
+    private func activateLeftConstraint(`for` cardView: UIView,
+                                        leftOffset: CGFloat) -> NSLayoutConstraint {
+
+        let constraint = NSLayoutConstraint(item: cardView,
+                                            attribute: .left,
+                                            relatedBy: .equal,
+                                            toItem: self.view,
+                                            attribute: .left,
+                                            multiplier: 1,
+                                            constant: leftOffset)
+
+        constraint.isActive = true
+
+        return constraint
     }
 
     private func bindView(){
         guard let meals = mealItems else { return }
         let currentMeal = meals[mealIndex]
         self.mealName.text = currentMeal.name
+    }
+}
+
+extension RatingsViewController: RatingViewDelegate {
+    func previousButtonTapped() {
+        print("Yes previous tapped!")
+    }
+
+    func nextButtonTapped() {
+        guard let mealItems = mealItems else { return }
+        guard self.mealIndex < mealItems.count - 1 else { return }
+
+        previousratingView.isHidden = true
+        previousLeftConstraint.constant = nextLeftOffset + 336
+
+        self.view.layoutIfNeeded()
+
+        previousratingView.isHidden = false
+
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       options: .curveEaseInOut,
+                       animations: {
+                        self.currentLeftConstraint.constant = self.previousLeftOffset
+                        self.nextLeftConstraint.constant = self.currentLeftOffset
+                        self.previousLeftConstraint.constant = self.nextLeftOffset
+
+                        self.view.layoutIfNeeded()
+        },
+                       completion: { _ in
+                        let tempView = self.currentratingView
+
+                        self.currentratingView = self.nextratingView
+                        self.nextratingView = self.previousratingView
+                        self.previousratingView = tempView
+
+                        self.currentLeftConstraint.isActive = false
+                        self.nextLeftConstraint.isActive = false
+                        self.previousLeftConstraint.isActive = false
+
+                        self.setUpAnimationConstraints()
+
+                        self.mealIndex += 1
+
+        } )
+    }
+
+    func setUpAnimationConstraints() {
+        currentLeftConstraint = activateLeftConstraint(for: currentratingView, leftOffset: currentLeftOffset)
+        nextLeftConstraint = activateLeftConstraint(for: nextratingView, leftOffset: nextLeftOffset)
+        previousLeftConstraint = activateLeftConstraint(for: previousratingView, leftOffset: previousLeftOffset)
     }
 }
